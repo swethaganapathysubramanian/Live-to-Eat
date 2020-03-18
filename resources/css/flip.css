@@ -1,0 +1,94 @@
+
+
+.card {
+    perspective: 500rem;
+    position: relative;
+    height: 560px;
+    border: 1px solid #f1f1f1;
+    background-color: transparent;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);;
+}
+
+.card-picture {
+    background-size: cover;
+    height: 11rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+}
+
+.pic1 {
+    background-image: linear-gradient(to right bottom,rgba(231,76,60,0.2),rgba(231,76,60,0.2)), url("images/3mealsperday.jpg");
+}
+
+.pic2 {
+    background-image: linear-gradient(to right bottom,rgba(231,76,60,0.2),rgba(231,76,60,0.2)), url("images/1mealperday.jpeg");
+}
+
+.pic3 {
+    background-image: linear-gradient(to right bottom,rgba(231,76,60,0.2),rgba(231,76,60,0.2)), url("images/1meal.jpg");
+}
+
+.card-content {
+    list-style: none;
+    padding: 3%;
+}
+
+.card-content ul {
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 40px;
+    padding-inline-start: 40px;
+}
+
+.card-content ul li {
+    text-align: center;
+    font-size: 100%;
+    padding: 8%;
+}
+
+.card-content ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.card-heeading {
+    float: right;
+    font-size: 200%;
+    padding-right: 20px;
+    font-weight: 300;
+    background-image: linear-gradient(to right bottom,rgba(231,76,60,0.2),rgba(231,76,60,0.2));
+    margin-top: -35px;
+    position: relative;
+    color: black;
+}
+
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+ border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background: #03446A;
+  transform: rotateY( 180deg );
+}
